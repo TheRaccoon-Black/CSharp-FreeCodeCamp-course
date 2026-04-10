@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
 using System.Diagnostics.CodeAnalysis;
@@ -24,21 +24,24 @@ namespace MyApp
 
         static void Main(string[] args)
         {
-            string nameInput = "ojik";
-            int ageInput = 22;
-            string addressInput = "bengkulu";
 
-            // PrintDetails(nameInput, ageInput, addressInput);//it's always on sequence, if you one to use params not in order you can try bellow:
-            PrintDetails(age: ageInput, name: nameInput, address: addressInput);//use named params
+            int result = Add(1);
+            Console.WriteLine(result);
+
+            PrintName("xiaome");
+            PrintName();
+        
             Console.ReadLine();
 
         } 
 
-        static void PrintDetails(string name, int age, string address)
+        static void PrintName(string name = "Ojik")
         {
-            Console.WriteLine(name);
-            Console.WriteLine(age);
-            Console.WriteLine(address);
+            Console.WriteLine($"Your name is: {name}");
+        }
+        static int Add(int a, int b = 50)//best practice is using default or 0 value;
+        {
+            return a + b;
         }
         
     }
