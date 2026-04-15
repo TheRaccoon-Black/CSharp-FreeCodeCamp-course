@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
 using System.Diagnostics.CodeAnalysis;
@@ -27,15 +27,10 @@ namespace MyApp
         static void Main(string[] args)
         {
             
-
-            try{
             Console.Write("Enter a number: ");
             int num = Convert.ToInt32(Console.ReadLine());
-            }
-            catch( Exception)
-            {
-                
-            }
+            // try enter the value with 20000000000000(really big numbers)
+            // and you will get exception unhandled
             Console.ReadLine();
 
         } 
